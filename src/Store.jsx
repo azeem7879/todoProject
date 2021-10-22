@@ -11,6 +11,7 @@ function saveToLocalStorage(state) {
     console.warn(e);
   }
 }
+//..........................................................................
 
 // load string from localStarage and convert into an Object
 // invalid output must be undefined
@@ -24,6 +25,7 @@ function loadFromLocalStorage() {
     return undefined;
   }
 }
+//..........................................................................
 
 const store = createStore(RootReducer, loadFromLocalStorage(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

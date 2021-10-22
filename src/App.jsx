@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 
 const App = () => {
-
+// use selector use ki hai
     const myData = useSelector((state) => state.Todoreducer.Task);
 
 
@@ -16,6 +16,7 @@ const App = () => {
     }, [myData]);
 
 
+//hooks ko apply kiya hua hai
 
     
     const [input, setInput] = useState("")
@@ -26,18 +27,19 @@ const App = () => {
     const [inputSearch, setInputSearch] = useState(false);
     const [filterArray, setFilterArray] = useState([])
 
-
+//yeh code of pieces jo hai time,date,and year ko get krny k liye kiya gya hai
 
     const time = new Date().toLocaleTimeString();
     const date = new Date().getDate().toString();
     const month = new Date().getMonth().toString();
     const year = new Date().getUTCFullYear().toString();
     const allData = `${time}-${date}-${month}-${year}`;
+        
 
     const inputEvent = (e) => {
         setInput(e.target.value);
     };
-
+//dispatch used here
     const dispatch = useDispatch();
     const buttonClick = () => {
 
@@ -56,7 +58,7 @@ const App = () => {
 
 
     }
-
+//update task function are here
 
     const updatTask = (id) => {
 
@@ -67,6 +69,7 @@ const App = () => {
         setUpdate(true);
 
     }
+// delete task function are here
 
     const deleteTask1 = (id) => {
 
@@ -82,7 +85,7 @@ const App = () => {
             setInputSearch(false)
         }
     }
-
+// filtered data functionality are here
     var filteredData;
 
     const searchTask = () => {
