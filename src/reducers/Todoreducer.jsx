@@ -9,7 +9,7 @@ const initialState = {
 }
 
 
-
+// task  reducer are here 
 const TODOTASK = (state = initialState, action) => {
 
     switch (action.type) {
@@ -26,6 +26,8 @@ const TODOTASK = (state = initialState, action) => {
                     }
                 ]
             }
+
+            //  update reducer are here 
         case UPDATE_TASK:
             return {
                 ...state,
@@ -37,6 +39,7 @@ const TODOTASK = (state = initialState, action) => {
                     return e;
                 })
             }
+            // delete reducer are here
         case DELETE_TASK:
             const newTask = state.Task.filter((e)=>e.id !== action.payload.id)
            
