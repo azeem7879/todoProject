@@ -39,7 +39,7 @@ const App = () => {
     const inputEvent = (e) => {
         setInput(e.target.value);
     };
-
+//dispatch used here
     const dispatch = useDispatch();
     const buttonClick = () => {
 
@@ -58,7 +58,7 @@ const App = () => {
 
 
     }
-
+//update task function are here
 
     const updatTask = (id) => {
 
@@ -69,6 +69,7 @@ const App = () => {
         setUpdate(true);
 
     }
+// delete task function are here
 
     const deleteTask1 = (id) => {
 
@@ -84,7 +85,7 @@ const App = () => {
             setInputSearch(false)
         }
     }
-
+// filtered data functionality are here
     var filteredData;
 
     const searchTask = () => {
